@@ -1,0 +1,15 @@
+{
+  "name": "salon-queue-management-system",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Regal Crown Salon — Real-Time Salon Queue Management System",
+  "scripts": {
+    "install:all": "npm --prefix server install && npm --prefix client install",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "build": "npm --prefix client run build",
+    "start": "npm --prefix server start",
+    "test:qa": "node server/tests/qa-scenarios.test.js"
+  }
+}

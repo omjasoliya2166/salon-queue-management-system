@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: regal-crown-salon-api
+    runtime: node
+    plan: free
+    buildCommand: npm --prefix server install
+    startCommand: node server/src/index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: CORS_ORIGIN
+        sync: false
+      - key: STAFF_PIN
+        value: "1234"
+      - key: OWNER_PIN
+        value: "9999"
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DB_PATH
+        value: ./data/salon.db
